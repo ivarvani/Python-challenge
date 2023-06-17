@@ -1,0 +1,7 @@
+PyPoll Analysis
+----------------------------------------
+The total votes cast: 369711
+----------------------------------------
+Charles Casper Stockham:   85213: 23.049%
+Diana DeGette:   272892: 73.812%
+Raymon Anthony Doane:   11606: 3.139%
