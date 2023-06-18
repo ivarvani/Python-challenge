@@ -38,7 +38,7 @@ with open(election_data_path, "r", encoding="UTF-8") as electionfile:
     # writing the results to analysis
     text_file_path = "Analysis/Analysis.txt"
     with open(text_file_path, "w", encoding="UTF-8") as text_file:
-        text_file.write("PyPoll Analysis")
+        text_file.write("Election Results")
         text_file.write("\n----------------------------------------")
         text_file.write("\n" f"The total votes cast: {total_votes}")
         text_file.write("\n----------------------------------------")

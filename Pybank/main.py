@@ -40,23 +40,23 @@ with open(budget_data_path, encoding="UTF-8") as csv_file:
                 new_month = row[0]
 
     #printing the results on the terminal
-    months = f"number of months = {line_count }"
+    months = f"Number of Months = {line_count }"
     print (months)
-    net = f"net total = {total}"
+    net = f"Net total = {total}"
     print(net)
-    positive_change = f"greatest positive change :{month}  {highest_change}"
+    positive_change = f"Greatest positive change :{month}  {highest_change}"
     print(positive_change)
-    negative_change =f"greatest negative change :{new_month}  {lowest_change}"
+    negative_change =f"Greatest negative change :{new_month}  {lowest_change}"
     print(negative_change)
     average = (sum(difference_list)/len(difference_list))
     print(f'the average change : {average :.2f}')
     #writing the results to analysis
     text_file_path ="Analysis/Analysis.txt"
     with open(text_file_path,'w',encoding='UTF-8') as text_file:
-        text_file.write("PyBank Analysis")
+        text_file.write("Financial Analysis")
         text_file.write("\n----------------------------------------")
         text_file.write("\n" + months)
         text_file.write("\n"+ net)
         text_file.write("\n" + positive_change)
         text_file.write("\n" + negative_change)
-        text_file.write("\n" f'the average change : {average :.2f}')
+        text_file.write("\n" f'The average change : {average :.2f}')

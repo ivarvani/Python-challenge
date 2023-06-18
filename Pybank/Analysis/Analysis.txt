@@ -1,7 +1,7 @@
-PyBank Analysis
+Financial Analysis
 ----------------------------------------
-number of months = 86
-net total = 22564198
-greatest positive change :Aug-16  1862002
-greatest negative change :Feb-14  -1825558
-the average change : -8311.11
+Number of Months = 86
+Net total = 22564198
+Greatest positive change :Aug-16  1862002
+Greatest negative change :Feb-14  -1825558
+The average change : -8311.11

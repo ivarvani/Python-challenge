@@ -1,4 +1,4 @@
-PyPoll Analysis
+Election Results
 ----------------------------------------
 The total votes cast: 369711
 ----------------------------------------
