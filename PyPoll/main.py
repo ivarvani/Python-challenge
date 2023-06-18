@@ -20,25 +20,21 @@ with open(election_data_path, "r", encoding="UTF-8") as electionfile:
     print(f'candidates : {" , ".join(candidate_list)}')
     # print(data)
     total_votes = len(vote_data)
-    winner = 0 
-    candidates_results = [] # the list will be populated by strings
+    winner = 0
+    candidates_results = []  # the list will be populated by strings
     for candidate in candidate_list:
         candidate_count = vote_data.count(candidate)
         if candidate_count > winner:
             winner = candidate_count
             winner_name = candidate
-        # print(
-        #     f"{candidate}:   {vote_data.count(candidate)}: {(((vote_data.count(candidate))/total_votes)*100):.3f}%"
-        # )
-        candidate_result: (str)=  f"{candidate}:   {vote_data.count(candidate)}: {(((vote_data.count(candidate))/total_votes)*100):.3f}%"
+        candidate_result:(str) = f"{candidate}:   {vote_data.count(candidate)}: {(((vote_data.count(candidate))/total_votes)*100):.3f}%"
         # ":(str)" has no effect on code. its to tell us the variable is string
         candidates_results.append(candidate_result)
         print(candidates_results)
     print(f"The total votes cast: {total_votes}")
     print(winner)
     print(winner_name)
-
-
+    ##### Analysis
     # writing the results to analysis
     text_file_path = "Analysis/Analysis.txt"
     with open(text_file_path, "w", encoding="UTF-8") as text_file:
@@ -48,3 +44,5 @@ with open(election_data_path, "r", encoding="UTF-8") as electionfile:
         text_file.write("\n----------------------------------------")
         text_file.write("\n")
         text_file.write("\n".join(candidates_results))
+        text_file.write("\n ----------------------------------------")
+        text_file.write("\n" f"The winner is ****{winner_name}****")
