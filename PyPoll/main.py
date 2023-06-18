@@ -17,7 +17,7 @@ with open(election_data_path, "r", encoding="UTF-8") as electionfile:
         vote_data.append(row[2])
         if row[2] not in candidate_list:
             candidate_list.append(row[2])
-    print(f'candidates : {" , ".join(candidate_list)}')
+    print(f'Candidates : {" , ".join(candidate_list)}')
     # print(data)
     total_votes = len(vote_data)
     winner = 0
@@ -30,7 +30,7 @@ with open(election_data_path, "r", encoding="UTF-8") as electionfile:
         candidate_result:(str) = f"{candidate}:   {vote_data.count(candidate)}: {(((vote_data.count(candidate))/total_votes)*100):.3f}%"
         # ":(str)" has no effect on code. its to tell us the variable is string
         candidates_results.append(candidate_result)
-        print(candidates_results)
+    print("\n".join(candidates_results))
     print(f"The total votes cast: {total_votes}")
     print(winner)
     print(winner_name)
